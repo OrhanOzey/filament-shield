@@ -255,7 +255,7 @@ class RoleResource extends Resource implements HasShieldPermissions
                     ->extraAttributes(['class' => 'border-0 shadow-lg'])
                     ->schema([
                         Forms\Components\Toggle::make($entity['resource'])
-                            ->label(FilamentShield::getLocalizedResourceLabel($entity['fqcn']))
+                            ->label(ucwords($entity['resource']))
                             ->helperText(Utils::showModelPath($entity['fqcn']))
                             ->onIcon('heroicon-s-lock-open')
                             ->offIcon('heroicon-s-lock-closed')
